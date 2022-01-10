@@ -23,6 +23,10 @@ const baseConfig = 	{
 		"minimizer": [ new TerserPlugin({"extractComments": false}) ]
 	},
 	"externals": {
+		"node:fs": "commonjs fs",
+		"node:path": "commonjs path",
+		"node:stream": "commonjs stream",
+		"node:util": "commonjs util",
 		"vscode": "commonjs vscode"
 	},
 	"plugins": [ new webpack.IgnorePlugin({"resourceRegExp": /katex/}) ]
